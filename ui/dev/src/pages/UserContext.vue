@@ -1,5 +1,6 @@
 <template>
-  <auth-user-context>
+  <auth-user-context
+    apiEndpoint="http://api.wgv">
   </auth-user-context>
 </template>
 

@@ -69,6 +69,7 @@
 import qs from "qs";
 import {v1} from "uuid";
 import ServiceException from "./ServiceException";
+import bus from "./AuthEventBus";
 
 export default {
   name: "AuthLogin",
@@ -165,12 +166,12 @@ export default {
       this.loading = false;
       this.removeState();
       this.$q.localStorage.set("token", token);
-      // this.$refs.bus.$emit("onTokenUpdate", token);
+      bus.emit("onTokenUpdate", token)
       let redirect = this.$route.query.redirect_uri;
       this.$router.replace(redirect ? {path: redirect} : this.index);
     },
     onConnectFail(e) {
-      // this.$refs.bus.$emit("onTokenUpdate", null);
+      bus.emit("onTokenUpdate", null)
       this.loading = false;
       this.error = e;
     },
