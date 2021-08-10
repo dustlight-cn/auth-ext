@@ -25,7 +25,7 @@ export class AuthEventBus {
                 listeners.forEach(listener => {
                     if (!listener)
                         return;
-                    listener(args)
+                    listener(...args)
                 })
             }
         }

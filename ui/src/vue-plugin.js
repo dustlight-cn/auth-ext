@@ -1,19 +1,22 @@
-import Component from './components/Component'
 import AuthLogin from './components/AuthLogin'
 import AuthUserContext from './components/AuthUserContext'
+import AuthAvatar from './components/AuthAvatar'
+import AuthAvatarButton from './components/AuthAvatarButton'
 
 const version = __UI_VERSION__
 
 function install(app) {
-    app.component(Component.name, Component)
     app.component(AuthLogin.name, AuthLogin)
     app.component(AuthUserContext.name, AuthUserContext)
+    app.component(AuthAvatar.name, AuthAvatar)
+    app.component(AuthAvatarButton.name, AuthAvatarButton)
 }
 
 export {
     version,
-    Component,
     AuthLogin,
     AuthUserContext,
+    AuthAvatar,
+    AuthAvatarButton,
     install
 }

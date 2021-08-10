@@ -1,11 +1,22 @@
 <template>
   <div>
-    <slot v-if="token == null" name="unauthorized">未登录</slot>
+    <slot v-if="token == null" name="unauthorized">
+      <q-icon name="error"/>
+      <span>Unauthorized</span>
+    </slot>
     <div v-else>
-      <slot v-if="(promise != null) && error == null" name="loading">加载中</slot>
+      <slot v-if="user == null && error == null" name="loading">
+        <div>
+          <div>
+            <q-spinner-tail color="primary" size="32px"/>
+          </div>
+        </div>
+      </slot>
       <div v-else>
-        <slot v-if="error != null" name="error" v-bind="error">错误：{{ error }}</slot>
-        <slot v-else name="authorized" v-bind="user">{{ user }}</slot>
+        <slot v-if="error != null" name="error" v-bind="error">
+          {{ error }}
+        </slot>
+        <slot v-else :user="user">{{ user }}</slot>
       </div>
     </div>
   </div>
@@ -16,7 +27,7 @@ import {UserApi, Configuration} from "@plus/auth-client-axios-js"
 import bus from "./AuthEventBus"
 
 let last = null
-let promise = null;
+let _promise = null;
 
 export default {
   name: "AuthUserContext",
@@ -33,7 +44,8 @@ export default {
       userApi: null,
       token: null,
       user: null,
-      error: null
+      error: null,
+      loading: false
     }
   },
   methods: {
@@ -46,28 +58,40 @@ export default {
     },
     onTokenUpdate(token) {
       this.token = token
-      this.loadUser()
+      if (token != null)
+        this.loadUser()
     },
     loadUser() {
-      if (promise == null)
-        promise = this.userApi.getTokenUser()
+      if (_promise == null) {
+        last = new Date().getTime()
+        _promise = this.userApi.getTokenUser()
             .then(res => {
               this.$q.localStorage.set("user", res.data)
               bus.emit("onUserUpdate", res.data)
             })
             .catch(e => {
+              if (e.response.status == 403) {
+                if (e.response.data && e.response.data.code == 1) {
+                  this.$q.localStorage.remove("user")
+                  this.$q.localStorage.remove("token")
+                  bus.emit("onUserUpdate", null)
+                  bus.emit("onTokenUpdate", null)
+                  return
+                }
+              }
               bus.emit("onUserError", e)
             })
             .finally(() => {
-              promise = null
+              _promise = null
             });
+      } else {
+        this.onUserUpdate(this.$q.localStorage.getItem("user"))
+      }
     },
     onUserUpdate(user) {
-      console.log(user)
       this.user = user
     },
     onUserError(error) {
-      console.error(error)
       this.error = error
     }
   },
@@ -78,6 +102,7 @@ export default {
     bus.on("onUserError", this.onUserError)
     this.onTokenUpdate(this.$q.localStorage.getItem("token"))
   },
+  computed: {},
   watch: {
     apiEndpoint() {
       this.initApi()
