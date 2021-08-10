@@ -100,6 +100,7 @@ export default {
     bus.on("onTokenUpdate", this.onTokenUpdate)
     bus.on("onUserUpdate", this.onUserUpdate)
     bus.on("onUserError", this.onUserError)
+    this.onUserUpdate(this.$q.localStorage.getItem("user"))
     this.onTokenUpdate(this.$q.localStorage.getItem("token"))
   },
   computed: {},
