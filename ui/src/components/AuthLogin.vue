@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center text-center">
+  <div class="flex flex-center text-center">
     <div v-if="error == null">
       <slot v-if="loading">
         <div>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </slot>
-  </q-page>
+  </div>
 </template>
 
 <script>

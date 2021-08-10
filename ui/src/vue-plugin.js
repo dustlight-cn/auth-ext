@@ -1,9 +1,9 @@
-import AuthLogin from './components/AuthLogin'
-import AuthUserContext from './components/AuthUserContext'
-import AuthAvatar from './components/AuthAvatar'
-import AuthAvatarButton from './components/AuthAvatarButton'
+import AuthLogin from './components/AuthLogin.vue'
+import AuthUserContext from './components/AuthUserContext.vue'
+import AuthAvatar from './components/AuthAvatar.vue'
+import AuthAvatarButton from './components/AuthAvatarButton.vue'
 
-const version = __UI_VERSION__
+const version = "0.0.1-alpha-1"
 
 function install(app) {
     app.component(AuthLogin.name, AuthLogin)

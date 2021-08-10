@@ -16,7 +16,7 @@
         <slot v-if="error != null" name="error" v-bind="error">
           {{ error }}
         </slot>
-        <slot v-else :user="user">{{ user }}</slot>
+        <slot v-else :token="token" :user="user">{{ user }}</slot>
       </div>
     </div>
   </div>
