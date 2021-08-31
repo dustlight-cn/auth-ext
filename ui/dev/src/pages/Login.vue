@@ -1,7 +1,6 @@
 <template>
   <q-page padding>
-
-    <!--      authorizeUri="http://accounts.wgv/authorize"-->
+    <!-- OAuth2 Implict 授权模式  -->
     <auth-login
       authorizeUri="http://accounts.wgv/authorize"
       clientId="86c3e34e2030000"

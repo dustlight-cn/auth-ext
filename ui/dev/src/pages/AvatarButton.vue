@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 登陆按钮 | 头像框   （取决于是否登陆） -->
     <auth-avatar-button
       :loginPage="{path:'login',query:{redirect_uri:$route.fullPath}}"
       apiEndpoint="http://api.wgv">
