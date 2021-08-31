@@ -35,7 +35,7 @@ export default {
     apiEndpoint: {
       type: String,
       default() {
-        return "http://api.dustlight.cn"
+        return "https://api.dustlight.cn"
       }
     }
   },
