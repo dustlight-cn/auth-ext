@@ -83,6 +83,7 @@ export default {
     redirectUri: String,
     scope: String,
     clientId: String,
+    jwt: Boolean,
     index: Object,
     help: Object,
     color: {
@@ -135,6 +136,7 @@ export default {
                 : location.href,
             client_id: this.clientId,
             response_type: "token",
+            jwt: this.jwt,
             state: this.generateState(),
           },
           null,

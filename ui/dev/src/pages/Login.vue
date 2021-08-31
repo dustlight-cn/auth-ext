@@ -12,9 +12,6 @@
       path:'/help'
       }"
     >
-      <template v-slot:error="{error}">
-        {{error}}
-      </template>
     </auth-login>
   </q-page>
 </template>

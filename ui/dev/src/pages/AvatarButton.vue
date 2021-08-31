@@ -4,7 +4,9 @@
       :loginPage="{path:'login',query:{redirect_uri:$route.fullPath}}"
       apiEndpoint="http://api.wgv">
     </auth-avatar-button>
-    <auth-user-context apiEndpoint='http://api.wgv'/>
+    <auth-user-context v-slot="{user}" apiEndpoint='http://api.wgv'>
+      用户名：{{ user.username }}
+    </auth-user-context>
   </div>
 </template>
 
