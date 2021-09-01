@@ -77,13 +77,28 @@ export default {
     authorizeUri: {
       type: String,
       default() {
-        return "https://accounts.dustlight.cn/authorize"
+        return process.env.auth.config.authorizationUri || "https://accounts.dustlight.cn/authorize"
       }
     },
     redirectUri: String,
-    scope: String,
-    clientId: String,
-    jwt: Boolean,
+    scope: {
+      type: String,
+      default() {
+        return process.env.auth.config.scope || ""
+      }
+    },
+    clientId: {
+      type: String,
+      default() {
+        return process.env.auth.config.clientId
+      }
+    },
+    jwt: {
+      type: Boolean,
+      default() {
+        return process.env.auth.config.tokenType == "jwt"
+      }
+    },
     index: Object,
     help: Object,
     color: {

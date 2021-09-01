@@ -62,7 +62,7 @@ export default {
     apiEndpoint: {
       type: String,
       default() {
-        return "http://api.dustlight.cn"
+        return process.env.auth.config.apiEndpoint || "https://api.dustlight.cn"
       }
     },
     loginPage: Object,
