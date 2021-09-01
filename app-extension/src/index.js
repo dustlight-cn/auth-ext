@@ -16,7 +16,7 @@ function extendConf(conf, api) {
     // make sure the stylesheet goes through webpack to avoid SSR issues
     conf.css.push('~quasar-ui-auth-ext/src/index.sass')
 
-    conf.framework.plugins.push("SessionStorage", "LocalStorage", "Notify")
+    conf.framework.plugins.push("SessionStorage", "LocalStorage", "Notify", "Dialog")
 
     conf.build.env.auth = {
         config: api.prompts

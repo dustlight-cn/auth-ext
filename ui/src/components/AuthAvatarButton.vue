@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import bus from './AuthEventBus'
+import bus from './common/AuthEventBus'
 import AuthUserContext from "./AuthUserContext";
 import AuthAvatar from "./AuthAvatar";
 import {TokenApi, Configuration} from "@plus/auth-client-axios-js"

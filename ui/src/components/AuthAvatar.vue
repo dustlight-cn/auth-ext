@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import bus from "./AuthEventBus";
+import bus from "./common/AuthEventBus";
 
 export default {
   name: 'AuthAvatar',

@@ -1,8 +1,10 @@
 <template>
   <div>
     <slot v-if="token == null" name="unauthorized">
-      <q-icon name="error"/>
-      <span>Unauthorized</span>
+      <div class="text-center">
+      <q-icon color="negative" name="error" size="5em"/>
+      <div>Unauthorized</div>
+      </div>
     </slot>
     <div v-else>
       <slot v-if="user == null && error == null" name="loading">
@@ -24,7 +26,7 @@
 
 <script>
 import {UserApi, Configuration} from "@plus/auth-client-axios-js"
-import bus from "./AuthEventBus"
+import bus from "./common/AuthEventBus"
 
 let last = null
 let _promise = null;

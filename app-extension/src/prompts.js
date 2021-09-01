@@ -9,50 +9,50 @@
  */
 
 module.exports = function () {
-  return [
-      {
-          name: 'authorizationUri',
-          type: 'input',
-          required: true,
-          message: 'Authorization Uri',
-          default: 'http://accounts.wgv/authorize'
-      },
-      {
-          name: 'apiEndpoint',
-          type: 'input',
-          required: true,
-          message: 'Api Endpoint',
-          default: 'http://api.wgv'
-      },
-      {
-          name: 'clientId',
-          type: 'input',
-          required: true,
-          message: 'ClientID',
-          default: '86c3e34e2030000'
-      },
-      {
-          name: 'tokenType',
-          type: 'list',
-          message: 'Choose Token Type',
-          choices: [
-              {
-                  name: 'Opaque Token',
-                  value: 'opaque',
-                  short: 'Opaque'
-              },
-              {
-                  name: 'Json Web Token',
-                  value: 'jwt',
-                  short: 'JWT'
-              }
-          ]
-      },
-      {
-          name: 'scope',
-          type: 'input',
-          required: false,
-          message: 'Scope'
-      }
-  ]
+    return [
+        {
+            name: 'authorizationUri',
+            type: 'input',
+            required: true,
+            message: 'Authorization Uri',
+            default: 'http://accounts.wgv/authorize'
+        },
+        {
+            name: 'apiEndpoint',
+            type: 'input',
+            required: true,
+            message: 'Api Endpoint',
+            default: 'http://api.wgv'
+        },
+        {
+            name: 'clientId',
+            type: 'input',
+            required: true,
+            message: 'ClientID',
+            default: '86c3e34e2030000'
+        },
+        {
+            name: 'tokenType',
+            type: 'list',
+            message: 'Choose Token Type',
+            choices: [
+                {
+                    name: 'Json Web Token',
+                    value: 'jwt',
+                    short: 'JWT'
+                },
+                {
+                    name: 'Opaque Token',
+                    value: 'opaque',
+                    short: 'Opaque'
+                }
+            ]
+        },
+        {
+            name: 'scope',
+            type: 'input',
+            required: false,
+            message: 'Scope'
+        }
+    ]
 }

@@ -3,8 +3,10 @@
   <auth-user-context
     v-slot="{user,token}"
     apiEndpoint="http://api.wgv">
-    用户对象：{{ user }}
-    Token对象：{{ token }}
+<pre>用户对象：{{ user }}
+
+Token对象：{{ token }}
+</pre>
   </auth-user-context>
 </template>
 

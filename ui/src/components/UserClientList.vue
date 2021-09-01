@@ -1,8 +1,8 @@
 <template>
   <div>
     <slot name="error" v-if="error">
-      <div class="text-center">
-        {{ error.message }}
+      <div class="flex flex-center text-center">
+        <error :error="error"/>
       </div>
     </slot>
     <slot v-else>
@@ -50,7 +50,7 @@
             :key="client.cid"
             appear-active-class="Fade In"
             leave-active-class="Fade Out">
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple @click="()=>$emit('onSelected',client)">
             <q-item-section avatar>
               <auth-client-logo :client="client"/>
             </q-item-section>
@@ -83,12 +83,13 @@
 
 <script>
 import {Configuration, ClientsApi} from "@plus/auth-client-axios-js"
-import NoResults from "./NoResults";
+import NoResults from "./common/NoResults";
 import AuthClientLogo from "./AuthClientLogo";
+import Error from "./common/Error";
 
 export default {
   name: "UserClientList",
-  components: {AuthClientLogo, NoResults},
+  components: {Error, AuthClientLogo, NoResults},
   props: {
     user: Object,
     token: Object,
@@ -123,6 +124,9 @@ export default {
     }
   },
   methods: {
+    onSelected() {
+
+    },
     load() {
       if (this.loading) return;
       this.loading = true;
