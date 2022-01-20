@@ -1,5 +1,5 @@
-<img src="https://img.shields.io/npm/v/quasar-ui-auth-ext.svg?label=quasar-ui-auth-ext">
-<img src="https://img.shields.io/npm/v/quasar-app-extension-auth-ext.svg?label=quasar-app-extension-auth-ext">
+<img src="https://img.shields.io/npm/v/@dustlight/quasar-ui-auth-ext.svg?label=@dustlight/quasar-ui-auth-ext">
+<img src="https://img.shields.io/npm/v/@dustlight/quasar-app-extension-auth-ext.svg?label=@dustlight/quasar-app-extension-auth-ext">
 
 Compatible with Quasar UI v2 and Vue 3.
 

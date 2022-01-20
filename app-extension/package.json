@@ -1,5 +1,5 @@
 {
-  "name": "quasar-app-extension-auth-ext",
+  "name": "@dustlight/quasar-app-extension-auth-ext",
   "version": "0.0.2-alpha",
   "description": "Auth UI Components",
   "author": "Hansin1997 <845612500@qq.com>",
@@ -12,7 +12,7 @@
   "bugs": "https://codeup.aliyun.com/60af7c922c5969c370c5a518/lib/auth-ext.git",
   "homepage": "",
   "dependencies": {
-    "quasar-ui-auth-ext": "latest"
+    "@dustlight/quasar-ui-auth-ext": "latest"
   },
   "engines": {
     "node": ">= 8.9.0",
