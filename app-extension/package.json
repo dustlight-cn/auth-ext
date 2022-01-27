@@ -1,15 +1,15 @@
 {
   "name": "@dustlight/quasar-app-extension-auth-ext",
-  "version": "0.0.2-alpha",
+  "version": "0.0.2-alpha-1",
   "description": "Auth UI Components",
   "author": "Hansin1997 <845612500@qq.com>",
   "license": "MIT",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://codeup.aliyun.com/60af7c922c5969c370c5a518/lib/auth-ext.git"
+    "url": "https://github.com/dustlight-cn/auth-ext.git"
   },
-  "bugs": "https://codeup.aliyun.com/60af7c922c5969c370c5a518/lib/auth-ext.git",
+  "bugs": "https://github.com/dustlight-cn/auth-ext/issues",
   "homepage": "",
   "dependencies": {
     "@dustlight/quasar-ui-auth-ext": "latest"

@@ -21,7 +21,7 @@ Create and register a boot file:
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-auth-ext'
+import Plugin from '@dustlight/quasar-ui-auth-ext'
 import 'quasar-ui-auth-ext/dist/index.css'
 
 Vue.use(Plugin)
@@ -30,7 +30,7 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-auth-ext/dist/index.css"></style>
+<style src="@dustlight/quasar-ui-auth-ext/dist/index.css"></style>
 
 <script>
 import { Component as Auth } from 'quasar-ui-auth-ext'
@@ -47,8 +47,8 @@ export default {
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-auth-ext'
-import 'quasar-ui-auth-ext/dist/index.css'
+import Plugin from '@dustlight/quasar-ui-auth-ext'
+import '@dustlight/quasar-ui-auth-ext/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -56,10 +56,10 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-auth-ext/dist/index.css"></style>
+<style src="@dustlight/quasar-ui-auth-ext/dist/index.css"></style>
 
 <script>
-import { Component as Auth } from 'quasar-ui-auth-ext'
+import { Component as Auth } from '@dustlight/quasar-ui-auth-ext'
 
 export default {
   components: {
@@ -78,16 +78,16 @@ Add the following tag(s) after the Quasar ones:
 ```html
 <head>
   <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/quasar-ui-auth-ext/dist/index.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@dustlight/quasar-ui-auth-ext/dist/index.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/quasar-ui-auth-ext/dist/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@dustlight/quasar-ui-auth-ext/dist/index.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/quasar-ui-auth-ext/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/@dustlight/quasar-ui-auth-ext/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
 # Setup
