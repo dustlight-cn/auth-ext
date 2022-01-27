@@ -8,13 +8,13 @@
 
 function extendConf(conf, api) {
     // register our boot file
-    conf.boot.push('~quasar-app-extension-auth-ext/src/boot/register.js')
+    conf.boot.push('~@dustlight/quasar-app-extension-auth-ext/src/boot/register.js')
 
     // make sure app extension files & ui package gets transpiled
     conf.build.transpileDependencies.push(/quasar-app-extension-auth-ext[\\/]src/)
 
     // make sure the stylesheet goes through webpack to avoid SSR issues
-    conf.css.push('~quasar-ui-auth-ext/src/index.sass')
+    conf.css.push('~@dustlight/quasar-ui-auth-ext/src/index.sass')
 
     conf.framework.plugins.push("SessionStorage", "LocalStorage", "Notify", "Dialog")
 
