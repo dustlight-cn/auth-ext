@@ -15,21 +15,21 @@ module.exports = function () {
             type: 'input',
             required: true,
             message: 'Authorization Uri',
-            default: 'http://accounts.wgv/authorize'
+            default: 'https://accounts.dustlight.cn/authorize'
         },
         {
             name: 'apiEndpoint',
             type: 'input',
             required: true,
             message: 'Api Endpoint',
-            default: 'http://api.wgv'
+            default: 'https://api.dustlight.cn'
         },
         {
             name: 'clientId',
             type: 'input',
             required: true,
             message: 'ClientID',
-            default: '86c3e34e2030000'
+            default: 'test'
         },
         {
             name: 'tokenType',
