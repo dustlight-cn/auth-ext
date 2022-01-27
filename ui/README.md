@@ -1,7 +1,7 @@
 # Component Auth
 
-[![npm](https://img.shields.io/npm/v/quasar-ui-auth-ext.svg?label=quasar-ui-auth-ext)](https://www.npmjs.com/package/quasar-ui-auth-ext)
-[![npm](https://img.shields.io/npm/dt/quasar-ui-auth-ext.svg)](https://www.npmjs.com/package/quasar-ui-auth-ext)
+[![npm](https://img.shields.io/npm/v/@dustlight/quasar-ui-auth-ext.svg?label=quasar-ui-auth-ext)](https://www.npmjs.com/package/@dustlight/quasar-ui-auth-ext)
+[![npm](https://img.shields.io/npm/dt/@dustlight/quasar-ui-auth-ext.svg)](https://www.npmjs.com/package/@dustlight/quasar-ui-auth-ext)
 
 **Compatible with Quasar UI v2 and Vue 3**.
 
@@ -22,7 +22,7 @@ Create and register a boot file:
 ```js
 import Vue from 'vue'
 import Plugin from '@dustlight/quasar-ui-auth-ext'
-import 'quasar-ui-auth-ext/dist/index.css'
+import '@dustlight/quasar-ui-auth-ext/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -33,7 +33,7 @@ Vue.use(Plugin)
 <style src="@dustlight/quasar-ui-auth-ext/dist/index.css"></style>
 
 <script>
-import { Component as Auth } from 'quasar-ui-auth-ext'
+import { Component as Auth } from '@dustlight/quasar-ui-auth-ext'
 
 export default {
   components: {

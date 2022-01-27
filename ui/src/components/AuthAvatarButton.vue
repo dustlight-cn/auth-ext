@@ -38,7 +38,7 @@
 import bus from './common/AuthEventBus'
 import AuthUserContext from "./AuthUserContext";
 import AuthAvatar from "./AuthAvatar";
-import {TokenApi, Configuration} from "@plus/auth-client-axios-js"
+import {TokenApi, Configuration} from "@dustlight/auth-client-axios-js"
 
 export default {
   name: "AuthAvatarButton",

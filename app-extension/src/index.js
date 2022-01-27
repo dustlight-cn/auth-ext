@@ -31,7 +31,7 @@ module.exports = function (api) {
     api.compatibleWith('@quasar/app', '^3.0.0')
 
     // Uncomment the line below if you provide a JSON API for your component
-    // api.registerDescribeApi('Auth', '~quasar-ui-auth-ext/src/components/Auth.json')
+    // api.registerDescribeApi('Auth', '~@dustlight/quasar-ui-auth-ext/src/components/Auth.json')
 
     // We extend /quasar.conf.js
     api.extendQuasarConf((conf) => extendConf(conf, api))

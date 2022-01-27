@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import {Configuration, ClientsApi} from "@plus/auth-client-axios-js"
+import {Configuration, ClientsApi} from "@dustlight/auth-client-axios-js"
 import NoResults from "./common/NoResults";
 import AuthClientLogo from "./AuthClientLogo";
 import Error from "./common/Error";

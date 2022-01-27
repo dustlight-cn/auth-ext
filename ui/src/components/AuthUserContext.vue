@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import {UserApi, Configuration} from "@plus/auth-client-axios-js"
+import {UserApi, Configuration} from "@dustlight/auth-client-axios-js"
 import bus from "./common/AuthEventBus"
 
 let last = null
